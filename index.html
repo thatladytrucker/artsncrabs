@@ -126,7 +126,7 @@
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            gap: 25px;
             margin-bottom: 50px;
         }
 
@@ -135,8 +135,8 @@
             border-radius: 8px;
             overflow: hidden;
             background: #ddd;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            height: 380px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            height: 480px; /* Taller height to show off gorgeous poster layouts */
         }
 
         .portfolio-item img {
@@ -151,11 +151,24 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(transparent, rgba(29, 53, 87, 0.9));
-            padding: 20px;
+            background: linear-gradient(transparent, rgba(29, 53, 87, 0.95));
+            padding: 25px 20px;
             color: #fff;
             opacity: 0;
             transition: opacity 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .portfolio-overlay h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .portfolio-overlay p {
+            font-size: 0.9rem;
+            opacity: 0.8;
         }
 
         .portfolio-item:hover .portfolio-overlay {
@@ -259,27 +272,30 @@
         </div>
 
         <h2 class="section-title">Design Portfolio</h2>
-        <p style="text-align: center; color: #666; margin-bottom: 30px;">A collection of recent custom posters, flyers, and marketing materials.</p>
+        <p style="text-align: center; color: #666; margin-bottom: 30px;">Featured event marketing and poster designs created for <strong>Union Mission Ministries (Grace Place)</strong>.</p>
         
         <div class="portfolio-grid">
             <div class="portfolio-item">
-                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=500&q=80" alt="Design Work 1">
+                <img src="24x36 FINAL SUMMER SASHAY POSTER.png" alt="Summer Sashay Mother's Day Fashion Show Poster">
                 <div class="portfolio-overlay">
-                    <h4>Community Flyer Design</h4>
+                    <h4>Summer Sashay Fashion Show</h4>
+                    <p>Custom Event Poster Design</p>
                 </div>
             </div>
 
             <div class="portfolio-item">
-                <img src="https://images.unsplash.com/photo-1626785774625-ddcddc3445e9?auto=format&fit=crop&w=500&q=80" alt="Design Work 2">
+                <img src="Grace Place - Fall Into Fashion Layers of Legacy.jpg" alt="Fall Into Fashion Layers of Legacy Poster">
                 <div class="portfolio-overlay">
-                    <h4>Event Poster Design</h4>
+                    <h4>Layers of Legacy Fashion Show</h4>
+                    <p>Autumn Apparel Event Flyer</p>
                 </div>
             </div>
 
             <div class="portfolio-item">
-                <img src="https://images.unsplash.com/photo-1561070791-26c113006238?auto=format&fit=crop&w=500&q=80" alt="Design Work 3">
+                <img src="Grace_Glow_Final_24x36_Poster.png" alt="The Grace Glow Self Care Poster">
                 <div class="portfolio-overlay">
-                    <h4>Business Promotion</h4>
+                    <h4>The Grace Glow Renewal Evening</h4>
+                    <p>Self Care & Floral Branding Layout</p>
                 </div>
             </div>
         </div>
