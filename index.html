@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arts & Crabs | Creative Studio & Concepts</title>
+    <style>
+        /* Modern Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9fb;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Container for clean alignment */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header / Brand */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e63946; /* Coastal Red */
+        }
+
+        .logo span {
+            color: #1d3557; /* Deep Navy Blue */
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1d3557 0%, #457b9d 100%);
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            opacity: 0.9;
+        }
+
+        /* Sections General */
+        .section-title {
+            text-align: center;
+            margin: 50px 0 30px 0;
+            font-size: 2rem;
+            color: #1d3557;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #e63946;
+            margin: 10px auto 0 auto;
+        }
+
+        /* Services Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #1d3557;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* The Incubator (Coming Soon Split Layout) */
+        .incubator-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .incubator-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .teaser-card {
+            border-radius: 8px;
+            overflow: hidden;
+            color: #fff;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 280px;
+        }
+
+        .teaser-left {
+            background: linear-gradient(rgba(230, 57, 70, 0.85), rgba(230, 57, 70, 0.95)), url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=500&q=80') center/cover;
+        }
+
+        .teaser-right {
+            background: linear-gradient(rgba(244, 162, 97, 0.9), rgba(244, 162, 97, 0.95)), url('https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&w=500&q=80') center/cover;
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 15px;
+            align-self: flex-start;
+        }
+
+        .teaser-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: #1d3557;
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">Arts <span>& Crabs</span></div>
+        </div>
+    </header>
+
+    <!-- Hero / Introduction -->
+    <section class="hero">
+        <div class="container">
+            <h1>Arts & Crabs</h1>
+            <p>Independent App Creation • AI Consulting • Premium Graphic Design</p>
+        </div>
+    </section>
+
+    <!-- Main Active Services Section -->
+    <main class="container">
+        <h2 class="section-title">What I Do</h2>
+        
+        <div class="grid">
+            <!-- App Development -->
+            <div class="card">
+                <h3>Independent App Creation</h3>
+                <p>Building streamlined, offline-friendly digital solutions. From highly precise Hours of Service (HOS) load calculators built for logistics professionals to completely private, local-storage wellness tools, I focus on performance without the fluff.</p>
+            </div>
+
+            <!-- AI Consulting -->
+            <div class="card">
+                <h3>Digital & AI Consulting</h3>
+                <p>Helping you leverage modern AI tools to automate workflows, optimize daily operations, or navigate tech stacks. Let's work together to make technology work seamlessly for your specific business goals.</p>
+            </div>
+
+            <!-- Graphic Design -->
+            <div class="card">
+                <h3>Posters & Flyers</h3>
+                <p>High-impact visual communication for local businesses, community initiatives, and private events. Turn your vision into custom, clean, and professional print-ready promotional marketing materials.</p>
+            </div>
+        </div>
+
+        <!-- The Incubator / Future Projects Section -->
+        <h2 class="section-title">The Incubator</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 30px;">A sneak peek at unique concepts and local experiences launching down the line.</p>
+        
+        <div class="incubator-container">
+            <!-- Concept 1 -->
+            <div class="teaser-card teaser-left">
+                <div>
+                    <span class="badge">Coming Soon</span>
+                    <h3>Arts & Crabs: The Sip & Paint</h3>
+                </div>
+                <p>Why watch paint dry when you can crack crabs? Enjoy a vibrant creative feast where you can craft a canvas masterpiece and enjoy fresh crabs while your artwork dries.</p>
+            </div>
+
+            <!-- Concept 2 -->
+            <div class="teaser-card teaser-right">
+                <div>
+                    <span class="badge">Coming Soon</span>
+                    <h3>Waffles & Wifi</h3>
+                </div>
+                <p>Your new remote work sanctuary. Fuel your daily grind with blazing-fast free Wi-Fi, cozy workspace vibes, and a fully loaded, customizable Waffle Bar.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Arts & Crabs. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
