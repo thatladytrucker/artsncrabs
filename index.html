@@ -122,6 +122,46 @@
             font-size: 0.95rem;
         }
 
+        /* Portfolio Grid Styling */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #ddd;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            height: 380px;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(29, 53, 87, 0.9));
+            padding: 20px;
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
         /* The Incubator (Coming Soon Split Layout) */
         .incubator-container {
             display: grid;
@@ -185,14 +225,12 @@
 </head>
 <body>
 
-    <!-- Header Navigation -->
     <header>
         <div class="container">
             <div class="logo">Arts <span>& Crabs</span></div>
         </div>
     </header>
 
-    <!-- Hero / Introduction -->
     <section class="hero">
         <div class="container">
             <h1>Arts & Crabs</h1>
@@ -200,36 +238,56 @@
         </div>
     </section>
 
-    <!-- Main Active Services Section -->
     <main class="container">
         <h2 class="section-title">What I Do</h2>
         
         <div class="grid">
-            <!-- App Development -->
             <div class="card">
                 <h3>Independent App Creation</h3>
                 <p>Building streamlined, offline-friendly digital solutions. From highly precise Hours of Service (HOS) load calculators built for logistics professionals to completely private, local-storage wellness tools, I focus on performance without the fluff.</p>
             </div>
 
-            <!-- AI Consulting -->
             <div class="card">
                 <h3>Digital & AI Consulting</h3>
                 <p>Helping you leverage modern AI tools to automate workflows, optimize daily operations, or navigate tech stacks. Let's work together to make technology work seamlessly for your specific business goals.</p>
             </div>
 
-            <!-- Graphic Design -->
             <div class="card">
                 <h3>Posters & Flyers</h3>
                 <p>High-impact visual communication for local businesses, community initiatives, and private events. Turn your vision into custom, clean, and professional print-ready promotional marketing materials.</p>
             </div>
         </div>
 
-        <!-- The Incubator / Future Projects Section -->
+        <h2 class="section-title">Design Portfolio</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 30px;">A collection of recent custom posters, flyers, and marketing materials.</p>
+        
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=500&q=80" alt="Design Work 1">
+                <div class="portfolio-overlay">
+                    <h4>Community Flyer Design</h4>
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1626785774625-ddcddc3445e9?auto=format&fit=crop&w=500&q=80" alt="Design Work 2">
+                <div class="portfolio-overlay">
+                    <h4>Event Poster Design</h4>
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1561070791-26c113006238?auto=format&fit=crop&w=500&q=80" alt="Design Work 3">
+                <div class="portfolio-overlay">
+                    <h4>Business Promotion</h4>
+                </div>
+            </div>
+        </div>
+
         <h2 class="section-title">The Incubator</h2>
         <p style="text-align: center; color: #666; margin-bottom: 30px;">A sneak peek at unique concepts and local experiences launching down the line.</p>
         
         <div class="incubator-container">
-            <!-- Concept 1 -->
             <div class="teaser-card teaser-left">
                 <div>
                     <span class="badge">Coming Soon</span>
@@ -238,7 +296,6 @@
                 <p>Why watch paint dry when you can crack crabs? Enjoy a vibrant creative feast where you can craft a canvas masterpiece and enjoy fresh crabs while your artwork dries.</p>
             </div>
 
-            <!-- Concept 2 -->
             <div class="teaser-card teaser-right">
                 <div>
                     <span class="badge">Coming Soon</span>
@@ -249,7 +306,6 @@
         </div>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2026 Arts & Crabs. All Rights Reserved.</p>
